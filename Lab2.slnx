@@ -1,3 +1,5 @@
-<Solution>
+﻿<Solution>
+  <Project Path="Launcher/Launcher.csproj" />
   <Project Path="Lab2/Lab2.csproj" />
+  <Project Path="mushroom/mushroom.csproj" />
 </Solution>

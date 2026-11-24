@@ -1,11 +1,8 @@
 ﻿# Lab 2 Assignment
 
-This repository contains two Windows Forms projects written in C#:
+This repository brings two Windows Forms projects together behind one app chooser. Start the launcher and choose **Bicycle Rental Calculator** or **Mushroom Identifier**. When you close the selected app, the chooser appears again.
 
-- **Bicycle Rental Calculator** (`Lab2`) calculates a rental price from the start and end hours.
-- **Mushroom Identifier** (`mushroom`) asks yes/no questions and suggests a mushroom from the list in the app.
-
-Each project runs on its own and has a simple login screen. The login forms only require both fields to be filled in; they do not check a username or password against an account.
+![Choose between the bicycle calculator and mushroom identifier](screenshots/app-selector.png)
 
 ## Bicycle Rental Calculator
 
@@ -17,43 +14,40 @@ Enter a start hour from 0 to 23 and an end hour from 1 to 24. The end hour must 
 | 07:00–13:59 and 19:00–20:59 | 1,000 RWF |
 | 14:00–18:59 | 1,500 RWF |
 
-The example below rents a bicycle from hour 10 to hour 21 and totals 13,500 RWF.
+This example rents a bicycle from hour 10 to hour 21 and totals 13,500 RWF.
 
 ![Bicycle rental calculator example](screenshots/bicycle-calculator.png)
 
 ## Mushroom Identifier
 
-Choose a mushroom in mind from the list, then click **Start** and answer each yes/no question. The app follows those answers to show one of six names: Agaric Jaunissant, Amanite tue-mouche, Cèpe de Bordeaux, Coprin chevelu, Girolle, or Pied bleu.
+Choose a mushroom from the list, click **Start**, then answer the yes-or-no questions. The app suggests one of six names: Agaric Jaunissant, Amanite tue-mouche, Cèpe de Bordeaux, Coprin chevelu, Girolle, or Pied bleu.
 
 ![Mushroom identifier menu](screenshots/mushroom-identifier.png)
 
 ## Login screens
 
+Both apps show a login form. The forms require a username and password to be entered, but they do not check those values against an account.
+
 ![Bicycle app login](screenshots/bicycle-login.png)
 
 ![Mushroom app login](screenshots/mushroom-login.png)
 
-## Run the projects
+## Run the assignment
 
-You need Windows and the .NET 10 SDK with the Windows Desktop workload.
-
-Run either app from the repository root:
+You need Windows and the .NET 10 SDK with the Windows Desktop workload. From the repository root, run:
 
 ```powershell
-dotnet run --project .\Lab2\Lab2.csproj
+dotnet run --project .\Launcher\Launcher.csproj
 ```
 
-```powershell
-dotnet run --project .\mushroom\mushroom.csproj
-```
-
-You can also open `Lab2.slnx` in Visual Studio and choose the project you want to start.
+The launcher builds the two projects and opens the app chooser. In Visual Studio, open `Lab2.slnx` and set **Launcher** as the startup project.
 
 ## Project structure
 
 ```text
 Lab2.slnx
+Launcher/    App chooser
 Lab2/        Bicycle rental calculator
 mushroom/    Mushroom identifier
-screenshots/ App screen images used in this README
+screenshots/ App images used in this README
 ```
